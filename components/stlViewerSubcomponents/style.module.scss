@@ -1,0 +1,36 @@
+.ToolbarComponent {
+    position: absolute;
+    background-color: rgb(188, 220, 248);
+    z-index: 1100;
+    height: 600px;
+    width: 130px;
+    border-radius: 15px;
+    top: 230px;
+    left: 20px;
+    padding: 10px;
+}
+
+.tectonicTypes {
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.activeTectonicType {
+    background-color: #345064;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: #fff;
+}
+
+.toolbarTitle {
+    text-shadow: 1px 1px #000000;
+}
+
+.tectonicName {
+    font-size: small;
+}

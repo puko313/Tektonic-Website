@@ -1,0 +1,140 @@
+.headerContainer {
+  position: relative;
+  top: 0;
+  padding: 25px 0 18px 0;
+  z-index: 1100;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 1440px;
+    padding: 0 20px;
+    width: 100%;
+    height: 55px;
+
+    .logoInner {
+      cursor: pointer;
+    }
+
+    .navbar {
+      .navigationBox {
+        display: flex;
+        justify-content: center;
+        grid-column-gap: 45px;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+
+        li {
+          p {
+            display: flex;
+            column-gap: 8px;
+          }
+          span {
+            position: relative;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 40px;
+            letter-spacing: 0.115em;
+            color: var(--font-light-color);
+            padding-bottom: 10px;
+            cursor: pointer;
+
+            &.special:hover {
+              .dropdownContent {
+                display: block;
+              }
+            }
+
+            &::after {
+              position: absolute;
+              transition: all 0.3s;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              width: 0;
+              content: ".";
+              color: transparent;
+
+              height: 2px;
+            }
+
+            &:hover {
+              &::after {
+                width: 100%;
+                transition: all 0.3s;
+              }
+            }
+
+            &.active {
+              font-weight: bold;
+
+              &::after {
+                position: absolute;
+                transition: all 0.3s;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 100%;
+                content: ".";
+                color: transparent;
+                background: var(--font-light-color);
+                height: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .navMenu {
+      display: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.hamburgerContainer {
+  transition: all 0.5s;
+  position: absolute;
+  top: 70px;
+  height: 0;
+  opacity: 0;
+  width: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  border-radius: 0 0 10px 10px;
+  background: var(--achievements-back);
+
+
+  .navigationList {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    span {
+      margin: 10px auto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      color: var(--contact-background);
+    }
+  }
+}
+
+.active {
+  transition: all 0.5s;
+  visibility: visible;
+  opacity: 1;
+  height: 340px;
+}
